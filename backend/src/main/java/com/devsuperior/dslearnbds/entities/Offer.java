@@ -31,6 +31,9 @@ public class Offer implements Serializable {
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant endMoment;
 	
+	// course EIMC
+	// Um curso pode ter muitas ofertas, fica (Offer *, Course 1)
+	// course_id é a chave estrangeira @JoinColumn
 	@ManyToOne
 	@JoinColumn(name = "course_id")
 	private Course course;

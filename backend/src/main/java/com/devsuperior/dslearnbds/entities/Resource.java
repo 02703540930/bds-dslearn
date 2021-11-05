@@ -27,6 +27,7 @@ public class Resource implements Serializable {
 	private String description;
 	private Integer position;
 	private String imgUri;
+	//tipos enumerados que correspondem as opcoes [0,1,2,3] do campo type
 	private ResourceType type;
 	
 	@ManyToOne

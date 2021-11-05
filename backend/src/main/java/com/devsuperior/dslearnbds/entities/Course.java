@@ -22,7 +22,11 @@ public class Course implements Serializable {
 	private String name;
 	private String imgUri;
 	private String imgGrayUri;
-	
+		
+	// Entidade independente pois mínimo é * (zero)
+	// Mapeado por curso "course" Escrito Identico ao Modelo Conceitual EIMC, da classe Course
+	// tem um List<offer> pois pode conter muitas ofertas "offers" EIMC
+	// lembrando precisar apenas do get para o List<Offer>
 	@OneToMany(mappedBy = "course")
 	private List<Offer> offers = new ArrayList<>();
 	

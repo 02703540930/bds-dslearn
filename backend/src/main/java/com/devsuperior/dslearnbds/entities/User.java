@@ -35,9 +35,9 @@ public class User implements UserDetails, Serializable {
 	private String email;
 	private String password;
 	
-	//Set eh muitos pra muitos sem repetir
-	//Um user pode ter muitos roles
-	//Um role pode ser ter muitos users, mas soh um por vez, sem repetir
+	// Usa-se "Set<roles> para o user pois eh muitos pra muitos 
+	// sem repetir, com no minimo 1 role 
+	// e 1 role por user
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role",
 		joinColumns = @JoinColumn(name = "user_id"),
